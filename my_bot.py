@@ -23,7 +23,7 @@ async def on_message(message):
     if message.content.startswith('!응애'): # 만약 !응애로 시작하는 채팅이 올라오면
         await message.channel.send('응애에요!') # 응애에요!라고 보내기
 
-client.run('ODI1ODg4NjU2OTM3NzEzNjk0.YGEewA.HTksbVZjFSnK1IlJEA3WkNfQHEw') #토큰
+client.run('토큰입력') #토큰
 
 @bot.command()  # 봇이 음성채널에 입장
 async def play(ctx):
