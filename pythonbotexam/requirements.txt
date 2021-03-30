@@ -1,0 +1,9 @@
+asyncio
+discord
+os 
+requests 
+warnings  
+urllib 
+urllib.request 
+bs4 
+re
