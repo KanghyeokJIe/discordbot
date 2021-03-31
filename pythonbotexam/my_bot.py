@@ -17,6 +17,8 @@ print("Token key : {}".format(token))
 # 봇의 명령어 인식
 bot = commands.Bot(command_prefix='!')
 
+# 상태말 변경 
+# 출처 : https://gall.dcinside.com/mgallery/board/view?id=discord&no=5724
 playing = cycle(["당신과 함께", "얘기", "옹알이"])
 
 @tasks.loop(minutes = 5)
@@ -93,6 +95,20 @@ async def on_message(message): # on_message() event : when the bot has recieved 
     if message.content.startswith("감사합니다"):
         embed = discord.Embed(description="감사합니다", color = 0x91301B)
         embed.set_image(url="http://upload3.inven.co.kr/upload/2020/05/16/bbs/i015787581984.gif")
+        await message.channel.send(embed=embed)
+
+    # 똘똘아 부르기
+
+    if message.content.startswith("똘똘아"):
+        embed = discord.Embed(description="멍멍!", color = 0x91301B)
+        embed.set_image(url="https://cdn.discordapp.com/attachments/823138931666190357/826777911368744960/E00A34CC-8D2D-4DE1-85C5-8BBB05CAF130.JPG")
+        await message.channel.send(embed=embed)
+
+    # 바우야 부르기
+
+    if message.content.startswith("바우야"):
+        embed = discord.Embed(description="왕!", color = 0x91301B)
+        embed.set_image(url="https://cdn.discordapp.com/attachments/823138931666190357/826778676254867466/received_207483250165262.jpeg")
         await message.channel.send(embed=embed)
 
    # 응애 답장
