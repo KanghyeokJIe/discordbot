@@ -88,6 +88,13 @@ async def on_message(message): # on_message() event : when the bot has recieved 
     if message.author == bot.user:
         return 
 
+    # 감사합니다 제리짤
+
+    if message.content.startswith("감사합니다"):
+        embed = discord.Embed(description="감사합니다", color = 0x91301B)
+        embed.set_image(url="http://upload3.inven.co.kr/upload/2020/05/16/bbs/i015787581984.gif")
+        await message.channel.send(embed=embed)
+
    # 응애 답장
 
     if message.content.startswith("응애"):
